@@ -1,0 +1,160 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+	
+	color: #fff;
+	font-family: Arial;
+}
+
+#wrapper {
+	position: relative;
+	top: -31px;
+	z-index: 0;
+	
+	margin: 0 auto;
+	
+	min-height: 100%;
+	width: 980px;
+	
+	background-color: #f8f8f8;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+}
+
+/*
+* Header
+*/
+#topNav {
+	position: relative;
+	z-index: 1;
+
+	width: 100%;
+	height: 30px;
+	
+	background: linear-gradient(#525252, #353535);
+	
+	border-bottom: 1px solid #3f3f3f;
+	box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#topNav a {
+	display: inline-block;
+	
+	padding: 8px 15px;
+	
+	color: #fff;
+	
+	border-right: 1px solid #333;
+	
+	text-decoration: none;
+	font-size: 0.8em;
+}
+
+#topNav a:hover {
+	background-color: #333;
+}
+
+#headerLogo {
+	padding-top: 30px;
+	height: 125px;
+	background: linear-gradient(#353535, #161616);
+}
+
+#headerLogo p {
+	margin: 0;
+	padding: 35px 10px;
+	
+	font-size: 3em;
+	
+}
+
+#headerNavbar {
+	height: 50px;
+	
+	background-color: #161616;
+	border-bottom: 5px solid #029dbe;
+}
+
+#headerNavbar a {
+	display: inline-block;
+
+	padding: 15px;
+	
+	color: #fff;
+	
+	text-decoration: none;
+	
+	border-left: 1px solid #070707;
+	border-top: 1px solid #2c2c2c;
+	border-right: 1px solid #2c2c2c;
+}
+
+#headerNavbar .current, #headerNavbar a:hover {
+	background: linear-gradient(#00728a, #029dbe);
+	
+	border: 1px solid #029dbe;
+}
+
+/**
+* Main
+*/
+#main {
+	color: #333;
+	padding: 10px 20px 60px 20px;
+}
+
+#main a {
+	color: #333;
+}
+
+#main a:hover {
+	text-decoration: none;
+}
+
+/**
+* Footer
+*/
+#footer {
+	position: absolute;
+	bottom: 0;
+		
+	width: 980px;
+	height: 50px;
+	
+	/*background-color: #161616;
+	*/
+	background: linear-gradient(#353535, #161616);
+	font-size: 14px;
+}
+
+#footer p {
+	margin: 0;
+	padding: 0;
+}
+
+#footer a {
+	padding-left: 10px;
+	
+	color: #fff;
+}
+
+#footer a:hover {
+	text-decoration: none;
+}
+
+#footer .left {
+	padding: 5px;
+	font-size: 12px;
+}
+
+#footer .left p {
+	padding: 3px;
+}
+
+#footer .right {
+	padding: 17px;
+}

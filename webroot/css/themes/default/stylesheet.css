@@ -1,0 +1,140 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	
+	min-height: 100%;
+
+	font-family: arial;
+	color: #333;
+	
+	background-color: #fff;
+}
+
+a {
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+#header {
+	width: 100%;
+	height: 110px;
+	
+	background-color: #fff;
+	border-top: 5px solid #228B22;
+	border-bottom: 1px solid #ccc;
+}
+
+#headerInner {
+	margin: 0 auto;
+	width: 980px;
+	
+	margin-top: 10px;
+}
+
+#headerInner a {
+	padding: 10px 15px;
+	margin-right: 20px;
+	font-family: arial;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#headerInner a:hover {
+	text-decoration: underline;
+}
+
+#headerInner .current {
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	background: #fff;
+	
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#headerNavBar {
+	float: left;
+	margin-top: 74px;
+}
+
+#headerLogo {
+	display: inline-block;
+	
+	float: right;
+}
+
+#headerLogo h1 {
+	margin: 0;
+	font-size: 50px;
+	color: #228B22;
+}
+
+#headerLogo h2 {
+	margin: 0;
+	font-size: 16px;
+	color: #228B22;
+	float: right;
+	font-style: italic;
+}
+
+#wrapper {
+	position: relative;
+	
+	margin: 0 auto;
+	
+	width: 980px;
+	min-height: 85%;
+}
+
+#main {
+	padding-bottom: 50px;
+}
+
+/**
+* Footer
+*/
+#footer {
+	position: absolute;
+	bottom: 0;
+		
+	width: 980px;
+	height: 50px;
+
+	font-size: 14px;
+}
+
+#footer p {
+	margin: 0;
+	padding: 0;
+}
+
+#footer a {
+	padding-left: 10px;
+	
+	color: #333;
+}
+
+#footer a:hover {
+	text-decoration: none;
+}
+
+#footer .left {
+	padding: 5px;
+	font-size: 12px;
+}
+
+#footer .left p {
+	padding: 3px;
+}
+
+#footer .right {
+	padding: 17px;
+}
