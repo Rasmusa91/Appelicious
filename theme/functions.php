@@ -1,4 +1,7 @@
 <?php
 	function getTitle($pAppelicious) {
-		return $pAppelicious["sitemap"][$pAppelicious["selectedPage"]]["name"] . (isset($pAppelicious["titleExtension"]) ? $pAppelicious["titleExtension"] : "");
+		$title = isset($pAppelicious["sitemap"][$pAppelicious["selectedPage"]]["name"]) ? $pAppelicious["sitemap"][$pAppelicious["selectedPage"]]["name"] : ucfirst($pAppelicious["currentPage"]);
+		$title .= (isset($pAppelicious["titleExtension"]) ? $pAppelicious["titleExtension"] : "");
+		
+		return $title;
 	}

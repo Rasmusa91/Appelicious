@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang = "<?= $lang; ?>">
 	<head>
-		<meta charset = "<?= $charset; ?>"/>
+		<meta charset="<?= $charset; ?>"/>
 		
 		<title><?= getTitle($appelicious); ?></title>
 		

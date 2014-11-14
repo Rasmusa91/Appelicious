@@ -9,3 +9,8 @@
 .clear {
 	clear: both;
 }
+
+.noSpaces {
+	margin: 0;
+	padding: 0;
+}

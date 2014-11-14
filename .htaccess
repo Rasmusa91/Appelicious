@@ -1,14 +1,19 @@
-RewriteEngine on
+RewriteEngine On
 
-RewriteRule ^index\/?$ index.php
+#SERVER
+#RewriteBase /~raap11/DV1485/appelicious/
 
+#SERVER
+ErrorDocument 400 /~raap11/DV1485/appelicious/error/
+ErrorDocument 401 /~raap11/DV1485/appelicious/error/
+ErrorDocument 403 /~raap11/DV1485/appelicious/error/
+ErrorDocument 404 /~raap11/DV1485/appelicious/error/
+ErrorDocument 500 /~raap11/DV1485/appelicious/error/
+
+#LOCALHOST
+ErrorDocument 404 /BTHWebb/DV1485/appelicious/error/
+
+#DEFAULT
 RewriteRule ^([^/\.]+)/?$ index.php?p=$1 [QSA,C]
-RewriteRule ^([^/\.]+)/?\?$ index.php?p=$1& [QSA]
-
 RewriteRule ^([^/\.]+)/([^/\.]+)/?$ index.php?p=$1&subp=$2 [QSA,C]
-RewriteRule ^([^/\.]+)/([^/\.]+)/?\?$ index.php?p=$1&subp=$2& [QSA]
-
 RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)/?$ index.php?p=$1&subp=$2&subsubp=$3 [QSA,C]
-RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)/?\?$ index.php?p=$1&subp=$2&subsubp=$3& [QSA]
-
-ErrorDocument 404 "Error, 404"
