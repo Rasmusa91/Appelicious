@@ -7,7 +7,7 @@ RewriteEngine On
 ErrorDocument 400 /~raap11/DV1485/appelicious/error/
 ErrorDocument 401 /~raap11/DV1485/appelicious/error/
 ErrorDocument 403 /~raap11/DV1485/appelicious/error/
-ErrorDocument 404 /~raap11/DV1485/appelicious/error/
+#ErrorDocument 404 /~raap11/DV1485/appelicious/error/
 ErrorDocument 500 /~raap11/DV1485/appelicious/error/
 
 #LOCALHOST
