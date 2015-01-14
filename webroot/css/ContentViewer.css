@@ -1,0 +1,96 @@
+.contentViewerEdit .title, .contentViewerRemove .title, .contentViewerSingle .title, .contentViewerOverview .title 
+{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.contentViewerSingle .date, .contentViewerOverview .date 
+{
+	padding: 5px 0 20px 0;
+	font-style: italic;
+	font-size: 14px;
+}
+
+.contentViewerSingle .show, .contentViewerOverview .show 
+{
+	font-weight: bold;
+	padding: 15px 0 5px 0;
+}
+
+.contentViewerOverview .admin, .contentViewerSingle .admin
+{
+	float: right;
+}
+
+.contentViewerOverview .admin p, .contentViewerSingle .admin p
+{
+	display: inline;
+
+	margin: 0;
+	padding: 0;
+	padding-left: 10px;
+	
+	font-style: italic;
+}
+
+.contentViewerRemove
+{
+	margin-bottom: 25px;
+}
+
+.contentViewerRemove .buttons input
+{
+	margin-top: 10px;
+	margin-right: 5px;
+}
+
+.contentViewerRemove form
+{
+	display: inline;
+}
+
+.contentViewerEdit .input input
+{
+	width: 800px;
+}
+
+.contentViewerEdit .input textarea
+{
+	width: 800px;
+	height: 300px;
+}
+
+.contentViewerEdit .inputTitle
+{
+	margin-top: 10px;
+	margin-left: 2px;
+	
+	font-weight: bold;
+}
+
+.contentViewerEdit .submit input
+{
+	margin-top: 20px;
+}
+
+.contentViewerOverview
+{
+	padding: 5px 5px 1px 5px;
+	border-radius: 5px;
+	box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.contentPreview 
+{
+	margin-bottom: 5px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.gray {
+	background: #C7EDFC;
+}
+
+.gray2 {
+	background: #E5F7FD;
+}

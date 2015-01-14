@@ -1,0 +1,22 @@
+#gallery figure {
+	display: inline-block;
+	padding: 10px;
+	padding-bottom: 5px;
+	margin: 5px;
+}
+
+#gallery figure img{
+	display: block;
+}
+
+#gallery figurecaption {
+	text-align: center;
+	display: block;
+	margin-top: 5px;
+	font-size: 13px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	
+	width: 100px;
+}

@@ -47,7 +47,9 @@
 	* 
 	*/
 	$appelicious["defaultPage"] =  "hello";
-	$appelicious["currentPage"] = (isset($_GET["p"]) ? $_GET["p"] : null);	
+	$appelicious["currentPage"] = (isset($_GET["p"]) ? $_GET["p"] : null);
+	$appelicious["currentSubPage"] = (isset($_GET["subp"]) ? $_GET["subp"] : null);
+	$appelicious["currentSubSubPage"] = (isset($_GET["subsubp"]) ? $_GET["subsubp"] : null);
 	$appelicious["selectedPage"] = (isset($appelicious["currentPage"]) ? $appelicious["currentPage"] : $appelicious["defaultPage"]);	
 	
 	/**

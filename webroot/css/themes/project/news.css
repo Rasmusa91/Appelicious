@@ -1,0 +1,110 @@
+.contentViewerOverview
+{
+	background: rgb(23, 23, 23);
+	border: 1px solid black;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.contentViewerSingle, .contentViewerEdit
+{
+	background: rgb(23, 23, 23);
+	padding: 5px;
+	border: 1px solid black;
+}
+
+.contentViewerSingleInnerWrapper, .contentViewerEditInnerWrapper
+{
+	border: 1px solid black;
+	background: rgb(12, 12, 12);
+	padding: 5px;
+}
+
+.contentPreview
+{
+	border-radius: 0;
+}
+
+.gray {
+	background: rgb(12, 12, 12);
+	border: 1px solid black;
+}
+
+.gray2 {
+	background: rgb(15, 15, 15);
+	border: 1px solid black;
+}
+
+.contentViewerEdit .title, .contentViewerRemove .title, .contentViewerSingle .title, .contentViewerOverview .title 
+{
+	font-size: 14px;
+	font-weight: bold;
+}
+.contentViewerSingle .title, .contentViewerOverview .titleOverview
+{
+	float: left;
+	padding: 10px;
+	padding-bottom: 15px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.contentViewerEdit .title
+{
+	font-size: 16px;
+	font-weight: bold;
+	padding: 5px;
+	padding-bottom: 7px;
+}
+
+.contentViewerSingle .admin
+{
+	margin-top: 12px;
+	margin-right: 5px;
+}
+
+.contentViewerOverview .admin
+{
+	margin-top: 12px;
+	padding-right: 10px;
+}
+
+.contentViewerSingle .admin .title
+{
+	padding: 0;
+	padding-top: 3px;
+	padding-right: 10px;
+}
+
+.contentViewerSingle .admin .buttons
+{
+	position: relative;
+	top: -2px;
+}
+
+.contentViewerSingle .admin form
+{
+	display: inline;
+}
+
+.contentViewerSingle .admin .title, .contentViewerSingle .admin .buttons
+{
+	display: inline;
+	font-size: 12px;
+}
+
+.contentViewerOverview .admin p, .contentViewerSingle .admin p
+{
+	font-style: normal;
+}
+
+.contentViewerSingle .date, .contentViewerOverview .date 
+{
+	font-style: italic;
+	font-size: 12px;
+}
+
+.contentViewerSingle .show, .contentViewerOverview .show 
+{
+	font-size: 12px;
+}

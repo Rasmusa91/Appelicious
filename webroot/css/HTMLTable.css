@@ -1,0 +1,122 @@
+.HTMLTableTable
+{
+	display: table;
+	width: 100%;
+
+	border-collapse: collapse; 
+}
+
+.HTMLTableRow {
+	display: table-row;
+	
+	max-width: 100px;
+}
+
+.HTMLTableCol {
+	display: table-cell;
+	border: 1px solid black;
+	
+	text-align: left;
+	vertical-align: top;
+	
+	padding: 10px;
+	
+	max-width: 200px;
+	word-break: break-all;
+}
+
+.HTMLTableCol img {
+	
+	margin: 5px 0 2px 5px !important;
+	padding: 5px !important;
+}
+
+.HTMLTableHead {
+	text-align: center;
+	vertical-align: middle;
+	
+	font-weight: bold;
+	padding: 5px;
+}
+
+.HTMLTableShowAmount {
+	float: right;
+	padding: 5px;
+}
+
+.HTMLTablePagination {
+	text-align: center;
+	width: 100%;
+	padding-top: 10px;
+}
+
+.HTMLTablePagination .arrow {
+	display: inline-block;
+	padding: 0 3px;
+}
+
+.HTMLTablePagination .innerPagination {
+	display: inline-block;
+	padding: 0 3px;
+}
+
+.HTMLTableHead p {
+	display: inline;
+}
+
+.HTMLTableMovieWrapper {
+	width: 100%;
+}
+
+.HTMLTableMovie 
+{
+	padding: 5px;
+}
+
+.HTMLTableMovieImage
+{
+	float: left;
+	display: inline-block;
+	padding: 5px 5px 2px 5px;	
+}
+
+.HTMLTableMovieRight 
+{
+	float: left;
+	padding-left: 10px;
+	width: 77%;
+}
+
+.HTMLTableMoviePlot
+{
+	margin: 20px 0;
+}
+
+.HTMLTableMovieHeaderLeft
+{
+	float:	left;
+}
+
+.HTMLTableMovieHeaderLeftDropdown
+{
+	float: left;
+	position: relative;
+	top: -5px;
+	border: 1px solid #000;
+}
+
+.HTMLTableMovieHeaderLeftDropdown .customDropdown
+{
+	width: 200px;
+}
+
+.HTMLTableMovieHeaderLeft img
+{
+	width: 20px !important;
+}
+
+.HTMLTableMovieHeaderRight
+{
+	float: right;
+	padding-top: 2px;
+}

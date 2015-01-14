@@ -1,0 +1,39 @@
+.calendarWrapperSmall
+{
+	
+}
+
+.calendarWeekHeadSmall, .calendarWeekDaySmall {
+	height: 20px !important;
+}
+
+.calendarDaySmall {
+	height: 20px !important;
+	width: 20px !important;
+	
+	text-align: right !important;
+	vertical-align: middle !important;
+}
+
+.calendarWeekSmall {
+	width: 25px !important;
+}
+
+.calendarDayNumberSmall {
+	font-size: 13px !important;
+}
+
+.calendarWeekHeadSmall, .calendarWeekDaySmall, .calendarDayNumberSmall.calendarDayPreviewSmall, .calendarWeekSmall {
+	font-size: 10px !important;
+}
+
+.calendarTitleSmall {
+	text-align: center;
+	font-size: 15px !important;
+}
+
+.calendarTitleNavSmall {
+	width: 5% !important;
+	font-size: 15px !important;
+	padding: 0 !important;
+}

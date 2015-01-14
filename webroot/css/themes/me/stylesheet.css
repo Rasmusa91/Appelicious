@@ -1,3 +1,8 @@
+@import url(calendar.css);
+@import url(HTMLTable.css);
+@import url(MovieSearch.css);
+@import url(gallery.css);
+
 html, body {
 	height: 100%;
 }
@@ -9,6 +14,40 @@ body {
 	
 	color: #fff;
 	font-family: Arial;
+}
+
+input, textarea {
+	padding: 0 5px;
+	
+	height: 20px;
+	width: 200px;
+	
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	outline: none;
+}
+
+input.button {
+	height: 25px;
+	width: 75px;
+	
+	background: linear-gradient(#00d2ff, #029dbe);
+	border: 1px solid #029dbe;
+}
+
+input.button:hover {
+	cursor: pointer;
+	
+	background: linear-gradient(#029dbe, #00d2ff);
+}
+
+textarea {
+	height: 100px;
+}
+
+h5 {
+	margin: 0;
+	padding: 5px 0 5px 0;
 }
 
 #wrapper {
@@ -28,7 +67,8 @@ body {
 /*
 * Header
 */
-#topNav {
+#topNav 
+{
 	position: relative;
 	z-index: 1;
 
@@ -39,23 +79,104 @@ body {
 	
 	border-bottom: 1px solid #3f3f3f;
 	box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+	
+	font-size: 0;
 }
 
-#topNav a {
+#topNav a 
+{
 	display: inline-block;
-	
-	padding: 8px 15px;
+	padding: 8px 10px;
 	
 	color: #fff;
+	text-decoration: none;
+	font-size: 13px;
 	
 	border-right: 1px solid #333;
-	
-	text-decoration: none;
-	font-size: 0.8em;
 }
 
-#topNav a:hover {
+#topNav a:hover, #topNav li:hover 
+{
 	background-color: #333;
+}
+
+#topNav ul 
+{
+	list-style: none; 
+	margin: 0; 
+	padding: 0;
+}
+
+#topNav li 
+{
+	position: relative;
+	display: inline-block;
+	font-size: 13px;
+}
+
+#topNav ul li a 
+{
+	width: 125px;
+}
+
+#topNav ul ul 
+{	
+	background: #333;
+	position:absolute;  
+	z-index: 2;
+	left: 0;
+	visibility: hidden;
+}	
+
+#topNav ul ul li
+{	
+	background: #333;
+}
+	
+#topNav ul ul li a
+{	
+	background: #333;
+}	
+	
+#topNav ul ul li a:hover
+{	
+	background-color: #525252;
+}		
+
+#topNav li:hover ul 
+{
+	visibility: visible;
+}
+
+#topNavLogin 
+{
+	float: right;
+	border-left: 1px solid #333;
+}
+
+#topNav #topNavLogin  ul li a
+{
+	width: 150px;
+	text-align: center;
+}
+
+#topNav #topNavLogin  ul ul
+{
+	left: auto;
+	right: 0;
+}
+
+#topNav #topNavLogin  ul ul li a
+{
+	text-align: left;
+}
+
+#loginForm {
+	padding: 10px;
+}
+
+#loginForm input{
+	margin-bottom: 10px;
 }
 
 #headerLogo {
@@ -67,9 +188,7 @@ body {
 #headerLogo p {
 	margin: 0;
 	padding: 35px 10px;
-	
 	font-size: 3em;
-	
 }
 
 #headerNavbar {
@@ -93,10 +212,45 @@ body {
 	border-right: 1px solid #2c2c2c;
 }
 
-#headerNavbar .current, #headerNavbar a:hover {
+#headerNavbar .current, #headerNavbar a:hover 
+{
 	background: linear-gradient(#00728a, #029dbe);
-	
 	border: 1px solid #029dbe;
+}
+
+#headerNavbar .headerNavAddPage 
+{
+	float: right;
+}
+
+/**
+* Breadcrumbs
+*/
+#breadcrumbs 
+{
+	padding: 20px 20px 0 20px;
+	color: #000;
+}
+
+#breadcrumbs p
+{
+	display: inline;
+}
+
+#breadcrumbs img 
+{
+	padding-right: 5px;
+}
+
+#breadcrumbs a
+{
+	color: #029dbe;
+}
+
+#breadcrumbs a:hover, #breadcrumbs .current
+{
+	color: #00728a;
+	text-decoration: none;
 }
 
 /**
@@ -113,6 +267,11 @@ body {
 
 #main a:hover {
 	text-decoration: none;
+}
+
+#blog #error h1
+{
+	font-size: 20px;
 }
 
 /**

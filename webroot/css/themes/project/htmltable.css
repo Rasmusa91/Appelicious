@@ -1,0 +1,85 @@
+.HTMLTableWrapper {
+	background: rgb(23, 23, 23);
+	padding: 5px 6px 5px 5px;
+}
+
+.HTMLTableTable {
+	background: rgb(12, 12, 12);
+	border: 1px solid #000;
+}
+
+.HTMLTableCol {
+	border: 1px solid #000;
+}
+
+.HTMLTableWrapper .arrow {
+	display: inline-block;
+	width: 15px;
+	padding: 0 3px 0 3px;
+}
+
+.HTMLTablePagination .innerPagination {
+	position: relative;
+	top: -4px;
+	display: inline-block;
+	padding: 0 5px 0 10px;
+}
+
+.HTMLTableHead .arrow {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.HTMLTableHead p {
+	display: inline;
+	
+	position: relative;
+	top: -2px;	
+}
+
+.HTMLTableMovie 
+{
+	background: rgb(12, 12, 12);
+	border: 1px solid #000;
+}
+
+.HTMLTableMovieImage
+{
+	border: 1px solid black;
+	background: rgb(23, 23, 23);
+}
+
+.HTMLTableMovieImage img
+{
+	border: 1px solid black;
+}
+
+.HTMLTableMovieTitle
+{
+	float: left;
+	padding: 10px 0 5px 0;
+	
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.HTMLTableMovieGenre
+{
+	font-size: 11px;
+}
+
+.HTMLTablePagination b 
+{
+	position: relative;
+	top: 1px;
+	font-size: 15px;
+	padding: 0 2px;
+}
+
+.HTMLTableMoviePrice
+{
+	position: relative;
+	top: 10px;
+	float: right;
+	font-size: 16px;
+}

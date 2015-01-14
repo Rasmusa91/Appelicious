@@ -1,0 +1,126 @@
+@import url(calendarSmall.css);
+
+.calendarTitle {
+	font-size: 40px;
+	text-align: center;
+}
+
+.calendarTitleNav {
+	font-size: 30px;
+	padding: 5px 5px;
+}
+
+.calendarTitleNavWrapper {
+	text-align: center;
+}
+
+.calendarTitleNav, .calendarTitle {
+	font-weight: bold;
+	text-align: center;
+}
+
+.calendarImage {
+	text-align: center;
+}
+
+.calendarImage img {
+	width: 100%;
+	padding: 0 !important;
+	margin: 0 !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+}
+
+.calendarNameRed {
+	color: red;
+}
+
+.calendarTable
+{
+	margin-top: 10px;
+	display: table;
+
+	border-collapse: collapse; 
+}
+
+.calendarRow {
+	display: table-row;
+}
+
+.calendarCol {
+	display: table-cell;
+	border: 1px solid black;
+	
+	text-align: center;
+	vertical-align: top;
+}
+
+.calendarWeekHead, .calendarWeekDay {
+	height: 30px;
+	vertical-align: middle;
+}
+
+.calendarWeek {
+	padding-top: 10px;
+	width: 25px;
+	height: 20px;
+}
+
+.calendarDay {
+	height: 125px;
+	width: 125px;
+	padding: 5px 10px 0 0;
+	position: relative;
+}
+
+.calendarDayNumber {
+	font-size: 35px;
+}
+
+.calendarDayNumber.calendarDayPreview {
+	font-size: 20px;
+}
+
+.calendarDayNames {
+	vertical-align: bottom;
+	text-align: left;
+	padding: 0 0 5px 10px;
+	position: absolute;
+	bottom: 0
+}
+
+.calendarDayNames p {
+	margin: 0;
+	padding: 0;
+}
+
+.calendarRedDay.calendarDayNumber {
+	color: red;
+}
+
+.calendarDayMoon, .calendarDayFlag
+{
+	float: left;
+	width: 20px;
+	margin: 7px 0 0 13px;
+}
+
+.calendarDayMoon img, .calendarDayFlag img {
+	box-shadow: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	border-radius: 0 !important;	
+}
+
+.calendarDayFlag  img{
+	width: 14px !important;
+}
+
+.calendarTitleNavWrapper p {
+	display: inline-block;
+	margin: 0;
+	padding: 0 10px;
+	padding-bottom: 5px;
+	font-size: 20px;
+	
+}

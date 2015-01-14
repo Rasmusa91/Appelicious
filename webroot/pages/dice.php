@@ -6,7 +6,7 @@
 <h2>Kasta tärning</h2>
 
 <p>
-	Hur många kast vill du göra <a href = "?p=dice&rolls=1">1 kast</a>, <a href = "?p=dice&rolls=3">3 kast</a> eller <a href = "?p=dice&rolls=6">6 kast</a>?
+	Hur många kast vill du göra <a href = "?p=dice&amp;rolls=1">1 kast</a>, <a href = "?p=dice&amp;rolls=3">3 kast</a> eller <a href = "?p=dice&amp;rolls=6">6 kast</a>?
 </p>
 
 <?php if (isset($rolls)): ?>

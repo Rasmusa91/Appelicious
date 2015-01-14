@@ -1,0 +1,32 @@
+.calendarTable {
+	box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+}
+
+.calendarCol {
+	border: none;
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.calendarDayMoon, .calendarDayFlag {
+	box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+	border-radius: 3px;
+}
+
+.calendarDayMoon:hover, .calendarDayFlag:hover {
+	box-shadow: #029dbe 0px 0px 10px;
+}
+
+.calendarImage {
+	box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	padding: 7px 0 4px 0;
+}
+
+.calendarImage:hover {
+	box-shadow: #029dbe 0px 0px 10px;
+}
+
+.calendarImage img {
+	width: 98%;
+}

@@ -1,0 +1,392 @@
+@import url(moviesearch.css);
+@import url(htmltable.css);
+@import url(news.css);
+@import url(calendar.css);
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	color: #c2c2c2;
+	font-size: 12px;
+}
+
+input, textarea {
+	padding: 0 5px;
+	
+	height: 20px;
+	width: 200px;
+	
+	border: 1px solid #000;
+	border-radius: 5px;
+	outline: none;
+	background: white;
+}
+
+select {
+	width: 200px;
+	height: 25px;
+	border-radius: 5px;
+	border: 1px solid #000;
+}
+
+input.button {
+	color: #c2c2c2;
+	height: 25px;
+	width: 75px;
+	font-weight: bold;
+	
+	background: linear-gradient(rgb(30, 30, 30) 0%, rgb(10, 10, 10) 100%);
+	border: 1px solid #000;
+}
+
+input.button:hover {
+	cursor: pointer;
+	background: linear-gradient(rgb(10, 10, 10) 0%, rgb(30, 30, 30) 100%);	
+}
+
+a {
+	color: #fff;
+	
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.darkWrapper {
+	background: rgb(12, 12, 12);
+	border: 1px solid #000;
+	padding: 5px;
+}
+
+.darkWrapper2 {
+	background: rgb(23, 23, 23);
+	border: 1px solid #000;
+	padding: 5px;
+}
+
+#topNav
+{
+	position: relative;
+	z-index: 1;
+
+	width: 100%;
+	height: 25px;
+
+	background: linear-gradient(to bottom, rgb(21,21,21) 0%,rgb(29,29,29) 10%,rgb(29,29,29) 90%,rgb(29,29,29) 90%,rgb(21,21,21) 100%);
+	border-bottom: 1px solid rgb(26, 26, 26);
+	border-top: 1px solid rgb(26, 26, 26);
+}
+
+#wrapper {
+	position: relative;
+	top: -29px;
+	z-index: 0;
+	
+	margin: 0 auto;
+	
+	min-height: 100%;
+	width: 980px;
+	
+	background: #000;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+}
+
+/**
+* Header
+*/
+#headerLogo 
+{
+	color: white;
+	padding-top: 15px;
+	height: 100px;
+	background: linear-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 30%, rgb(30, 30, 30) 100%);
+}
+
+#headerLogoInner
+{
+	margin: 0;
+	padding: 35px 10px;
+}
+
+#headerLogo p 
+{
+	margin: 0;
+	padding: 0;
+}
+
+#headerLogo .logoTitle
+{
+	font-size: 22px;
+}
+
+#headerLogo .logoSlogan
+{
+	font-size: 14px;
+	font-style: italic;
+}
+
+#headerLogoInner .left {
+	padding-right: 20px;
+}
+
+#headerNavbar {
+	height: 50px;
+	
+	background: linear-gradient(rgb(30, 30, 30) 0%, rgb(0, 0, 0) 5%, rgb(50, 50, 50) 5%, rgb(20, 20, 20) 95%, rgb(0, 0, 0) 100%);
+}
+
+#headerNavbar a {
+	display: inline-block;
+
+	margin: 13px 0;
+	padding: 5px 15px;
+	
+	color: #fff;
+	
+	text-decoration: none;	
+	font-weight: normal;
+
+	border-right: 1px solid rgb(60, 60, 60);
+	border-left: 1px solid rgb(0, 0, 0);
+}
+
+#headerNavbar .first {
+	border-left: none;
+}
+
+#headerNavbar .last {
+	border-right: none;
+}
+
+
+#headerNavbar .current, #headerNavbar a:hover 
+{
+	text-decoration: underline;
+}
+
+/**
+* Breadcrumbs
+*/
+#breadcrumbs 
+{
+	margin: 5px;
+	padding: 5px;
+	color: #fff;
+'	font-size: 14px;
+}
+
+#breadcrumbs p
+{
+	display: inline;
+}
+
+#breadcrumbs img 
+{
+	padding-right: 10px;
+}
+
+#breadcrumbs a
+{
+	font-weight: normal;
+	color: #fff;
+}
+
+#breadcrumbs a:hover, #breadcrumbs .current
+{
+	color: #ccc;
+	text-decoration: none;
+}
+
+#main 
+{
+	padding: 0 5px 56px 5px;
+}
+
+/**
+* Footer
+*/
+#footer {
+	position: absolute;
+	bottom: 0;
+		
+	width: 980px;
+	height: 50px;
+	
+	background: rgb(14, 14, 14);
+	border-top: 1px solid rgb(25, 25, 25);
+	font-size: 14px;
+}
+
+#footer p {
+	margin: 0;
+	padding: 0;
+}
+
+#footer a {
+	padding-left: 10px;
+	
+	color: #fff;
+}
+
+#footer a:hover {
+	text-decoration: none;
+}
+
+#footer .left {
+	padding: 5px;
+	font-size: 12px;
+}
+
+#footer .left p {
+	padding: 3px;
+}
+
+#footer .right {
+	padding: 17px;
+}
+
+#topNavLogin 
+{
+	float: right;
+	background: red;
+}
+
+#topNav #topNavLogin  ul li a
+{
+	width: 150px;
+	text-align: center;
+	border-left: 1px solid #333;
+}
+
+#topNav #topNavLogin  ul ul
+{
+	left: auto;
+	right: 0;
+}
+
+#topNav #topNavLogin  ul ul li a
+{
+	text-align: left;
+}
+
+#loginForm {
+	padding: 10px;
+}
+
+#loginForm input{
+	margin-bottom: 10px;
+}
+
+#topNavLogin ul {
+	float: right;
+}
+
+#topNavLogin.customDropdown {
+	background: linear-gradient(rgb(30, 30, 30) 0%, rgb(40, 40, 40) 100%);
+	height: 25px;
+}
+
+#topNavLogin.customDropdown a
+{
+	padding: 5px !important;
+}
+
+.customDropdown
+{
+	float: right;
+	position: relative;
+	z-index: 1;
+
+	width: 100%;
+	height: 31px;
+	
+	background: linear-gradient(rgb(30, 30, 30) 0%, rgb(10, 10, 10) 100%);
+		
+	font-size: 0;
+}
+
+.customDropdown a
+{
+	display: inline-block;
+	padding: 8px 10px;
+	
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.customDropdown a:hover, .customDropdown li:hover 
+{
+	background-color: rgb(10, 10, 10);
+}
+
+.customDropdown ul 
+{
+	list-style: none; 
+	margin: 0; 
+	padding: 0;
+}
+
+.customDropdown li 
+{
+	position: relative;
+	display: inline-block;
+	font-size: 12px;
+}
+
+.customDropdown ul li a 
+{
+	width: 180px;
+}
+
+.customDropdown ul ul 
+{	
+	background: rgb(10, 10, 10)3;
+	position:absolute;  
+	z-index: 2;
+	left: 0;
+	visibility: hidden;
+}	
+
+.customDropdown ul ul li
+{	
+	background: rgb(10, 10, 10);
+}
+	
+.customDropdown ul ul li a
+{	
+	background: rgb(10, 10, 10);
+}	
+	
+.customDropdown ul ul li a:hover
+{	
+	background-color: rgb(20, 20, 20);
+}		
+
+.customDropdown li:hover ul 
+{
+	visibility: visible;
+}
+
+.topNavLoginRegister  a{
+	display: inline;
+	padding: 0;
+	margin: 0;
+	width: auto;
+	border: none !important;
+	
+	position: relative;
+	top: 3px;
+}
+
+.topNavLoginRegister  a:hover {
+	background: none !important;
+	text-decoration: underline;
+}

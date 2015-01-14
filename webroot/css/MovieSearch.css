@@ -1,0 +1,45 @@
+.MovieSearchHolder
+{
+	width: 100%;
+	border: 1px solid #000;
+}
+
+.MovieSearchTable
+{
+	display: table;
+	width: 100%;
+	border: 1px solid #000;
+}
+
+.MovieSearchRow
+{
+	display: table-row;
+}
+
+.MovieSearchCol
+{
+	padding: 7px;
+	display: table-cell;
+	vertical-align: top;
+}
+
+.MovieSearchCol.leftCol
+{
+	width: 30%;
+}
+
+.MovieSearchCol.rightCol
+{
+	width: 70%;
+}
+
+.MovieSearchCol.titleCol
+{
+	font-size: 20px;
+	font-weight: bold;	
+}
+
+.MovieSearchCol.smallInput input
+{
+	width: 90px;
+}

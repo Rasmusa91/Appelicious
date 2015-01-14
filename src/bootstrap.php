@@ -9,7 +9,7 @@
  *
  */
 function myExceptionHandler($exception) {
-  echo "Anax: Uncaught exception: <p>" . $exception->getMessage() . "</p><pre>" . $exception->getTraceAsString(), "</pre>";
+  echo "Appelicious: Uncaught exception: <p>" . $exception->getMessage() . "</p><pre>" . $exception->getTraceAsString(), "</pre>";
 }
 set_exception_handler('myExceptionHandler');
 
@@ -63,17 +63,66 @@ function getLinks($sitemap, $currClass = null, $currPage = null)
 {
 	$output = "";
 	
+	$i = 0;
 	foreach($sitemap as $key => $value) 
 	{
-		$class = (isset($currPage) && isset($currClass) && $currPage == $key) ? "class = \"" . $currClass . "\"" : ""; 
+		$class = isset($value["class"]) ? $value["class"] : "";
+		$class .= (isset($currPage) && isset($currClass) && $currPage == $key ? " " . $currClass : "");
+		
+		if($i == 0) {
+			$class .= " first";
+		}
+		
+		if($i == count($sitemap) - 1) {
+			$class .= " last";
+		}
+
+		$class = "class = \"" . $class . "\"";
 		
 		$output .= "<a $class href = \"" . $value["url"] . "\">" . $value["name"] . "</a>";
+	
+		$i++;
 	}
 	
 	return $output;
 }
 
-function getServerPath($pDirectory)
+/**
+* Convert a sitemap to links with sublinks
+*
+*/
+function getLinksSub($sitemap, $currClass = null, $currPage = null)
+{
+	$output = "<ul>";
+	
+	foreach($sitemap as $key => $value) 
+	{	
+			
+		$class = (isset($currPage) && isset($currClass) && $currPage == $key) ? "class = \"" . $currClass . (isset($value["class"]) ? " " . $value["class"] : "") . "\"" : ""; 
+		
+		$output .= "<li><a $class href = \"" . $value["url"] . "\">" . $value["name"] . "</a>";
+		
+		if(isset($value["suburls"]) && count($value["suburls"]) > 0) 
+		{
+			$output .= "<ul>";
+			
+			foreach($value["suburls"] as $subKey => $subValue)
+			{
+				$output .= "<li><a $class href = \"" . $subValue["url"] . "\">" . $subValue["name"] . "</a></li>";
+			}
+			
+			$output .= "</ul>";
+		}
+		
+		$output .= "</li>";
+	}
+	
+	$output .= "</ul>";
+	
+	return $output;
+}
+
+function getServerPath($pDirectory = null)
 {
 	$url = "http";
 	$url .= (@$_SERVER["HTTPS"] == "on") ? 's' : '';
@@ -82,7 +131,10 @@ function getServerPath($pDirectory)
 	$url .= $_SERVER["SERVER_NAME"] . $_SERVER["PHP_SELF"];
 	$url = str_replace(basename($url), "", $url);
 	$url = str_replace(basename($url) . "/", "", $url);
-	$url .= $pDirectory . "/";
+	
+	if(isset($pDirectory)) {
+		$url .= $pDirectory . "/";
+	}
 	
 	return $url;
 }
@@ -131,4 +183,159 @@ function destroySession() {
   
   // Finally, destroy the session.
   session_destroy();
+}
+
+function getURLQuery()
+{
+	$queries = explode("?", $_SERVER["REQUEST_URI"]);
+	
+	if(count($queries) > 1) {
+		$queries = $queries[1];
+	}
+	else {
+		$queries = "";
+	}
+	
+	return $queries;
+}
+
+function makeURLQuery($pQueryArray)
+{
+	$query = "";
+	
+	foreach($pQueryArray as $key => $value) 
+	{
+		if(!empty($value)) {
+			$query .= $key . "=" . $value . "&";
+		}
+	}
+	
+	$query = substr($query, 0, -1);
+
+	return $query;
+}
+
+function extendURL($pExtension, $pQueries = null)
+{
+	if(!isset($pQueries)) {
+		$queries = getURLQuery();
+	}
+	else {
+		$queries = $pQueries;
+	}
+	
+	if(!empty($queries)) {
+		$queries = explode("&", $queries);
+	}
+	else {
+		$queries = array();
+	}
+
+	if(isset($pExtension))
+	{
+		$pExtension = explode("&", $pExtension);
+		if(is_array($pExtension)) {
+			$queries = array_merge($queries, $pExtension);
+		}
+		else {
+			array_push($queries, $pExtension);
+		}
+	}
+
+	$tempQueries = array();
+	foreach($queries as $q) 
+	{
+		$explodedQ = explode("=", $q);
+		
+		$tempQueries[$explodedQ[0]] = $explodedQ[1];
+	}
+	
+	$queries = $tempQueries;
+
+	$query = "?";
+	
+	foreach($queries as $key => $value) {
+		$query .= $key . "=" . $value . "&";
+	}
+	
+	$query = substr($query, 0, -1);
+		
+	return $query;
+}
+
+		
+/**
+* This class will easily make surround some content around a div with one or more class names
+*
+*/
+function GetCell($pClass, $pContent = "")
+{
+	$output = "<div class = \"" . $pClass . "\">" . $pContent . "</div>";
+	
+	return $output;
+}	
+
+function slugify($str) 
+{
+	$str = str_replace(array('å','ä','ö', 'Å', 'Ä', 'Ö'), array('a','a','o', 'A', 'A', 'O'), $str);
+	$str = mb_strtolower(trim($str));
+	$str = preg_replace('/[^a-z0-9-]/', '-', $str);
+	$str = trim(preg_replace('/-+/', '-', $str), '-');
+	
+	return $str;
+}
+
+function ValidateDate($pDate)
+{
+	$validDate = true;
+	
+	$explDate = explode(' ', $pDate);
+	
+	if(count($explDate) != 2) {
+		$validDate = false;
+	}
+	
+	if($validDate)
+	{
+		$ddmmyy = explode('-', $explDate[0]);
+		$validDate = ((count($ddmmyy) == 3) && checkdate($ddmmyy[1], $ddmmyy[2], $ddmmyy[0]));
+	}
+	
+	if($validDate)
+	{
+		$validDate = preg_match("/(2[0-3]|[01][0-9]):[0-5][0-9]:[0-5][0-9]/i", $explDate[1]);
+	}	
+	
+	return $validDate;
+}
+
+function ValidateValue($pValue, $pDefault = null)
+{
+	return (isset($pValue) ? $pValue : $pDefault);
+}
+
+function ValidatePost($pName, $pDefault = null)
+{
+	return (isset($_POST[$pName]) ? $_POST[$pName] : $pDefault);
+}
+
+function ValidateGet($pName, $pDefault = null)
+{
+	return (isset($_GET[$pName]) ? $_GET[$pName] : $pDefault);
+}
+
+function ValidateFile($pName, $pDefault = null)
+{
+	return (isset($_FILES[$pName]["name"]) && !empty($_FILES[$pName]["name"]) ? $_FILES[$pName] : $pDefault);
+}
+
+function ValidateURL($pURL)
+{
+	$headers = @get_headers($pURL);
+	return !($headers[0] == null || $headers[0] == "HTTP/1.1 404 Not Found");
+}
+
+function ValidateArrayKey($pKey, $pArray, $pDefault = null, $pPredecessor = "", $pSuccessor = "")
+{
+	return (array_key_exists($pKey, $pArray) ? $pPredecessor . $pArray[$pKey] . $pAdditional : $pDefault);
 }

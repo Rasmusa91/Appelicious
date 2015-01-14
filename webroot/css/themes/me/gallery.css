@@ -1,0 +1,14 @@
+#gallery figure {	
+	border-radius: 5px;
+	box-shadow: #888 0px 0px 10px;	
+}
+
+#gallery figure img{
+	box-shadow: none !important;
+	margin: 0 !important;
+	padding: 0 !important;	
+}
+
+#gallery figure img:hover {
+	box-shadow: #029dbe 0px 0px 50px !important;
+}
